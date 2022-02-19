@@ -1,0 +1,136 @@
+.order {
+    margin: 50px 0;
+    margin-top: $header-height;
+    width: 100%;
+    height: 100%;
+    background-color: var(--second-color);
+    border-radius: $border-radius;
+    padding: 30px;
+
+    @include mobile {
+        margin-top: 50px;
+
+        .section__title {
+            font-size: 2.25rem;
+        }
+    }
+
+    &__customer {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+
+        &__name {
+            color: var(--txt-main-color);
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+
+            @include mobile {
+                font-size: 1.75rem;
+                margin-bottom: -10px;
+                margin-top: 10px;
+            }
+        }
+        &__info {
+            &__user {
+                margin-top: 20px;
+                overflow-wrap: break-word;
+
+                label {
+                    display: block;
+                    font-size: 1.5rem;
+                    padding: 10px 5px;
+                    width: 100%;
+                    height: 100%;
+                    font-style: italic;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+
+    &__form {
+        display: none;
+        transform: translateY(-100%);
+
+        &.active {
+            display: unset;
+            transform: translateY(0);
+        }
+    }
+
+    &__form-of-payment {
+        @include flex(center, center);
+        flex-direction: column;
+
+        &__input {
+            width: 100%;
+            @include flex(flex-start, space-around);
+            flex-direction: column;
+            font-size: 2rem;
+            color: var(--txt-main-color);
+            margin-top: 15px;
+            font-weight: 500;
+
+            &__item {
+                margin: 10px;
+
+                input {
+                    width: 24px;
+                    height: 24px;
+                    margin-right: 10px;
+                }
+            }
+
+            @include mobile {
+                font-size: 1.5rem;
+
+                input {
+                    width: 20px;
+                    height: 20px;
+                    margin-right: 10px;
+                }
+            }
+        }
+
+        .submit-order {
+            width: 100%;
+            margin-top: 20px;
+
+            button {
+                width: 100%;
+                font-size: 2rem;
+            }
+        }
+    }
+
+    .form {
+        label {
+            display: none;
+        }
+
+        span {
+            height: 10px;
+        }
+
+        input {
+            @include mobile {
+                padding: 5px;
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+
+.check-out {
+    display: none;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease 0s;
+
+    &.active {
+        display: unset;
+        transform: translateY(0);
+        transition: transform 0.3s ease 0s;
+    }
+}

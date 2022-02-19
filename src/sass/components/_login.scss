@@ -1,0 +1,105 @@
+.login {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 200;
+    left: 0;
+    top: 0;
+    @include flex(center, center);
+    transform: translateY(-200%);
+    transition: transform 0.44s ease 0s;
+    font-size: 1.25rem;
+
+    .login-form-contain {
+        padding: 30px;
+        width: 500px;
+        height: 500px;
+        background: var(--second-color);
+        box-shadow: var(--box-shadow);
+        border-radius: $border-radius;
+        @include flex(center, space-evenly);
+        flex-direction: column;
+        position: relative;
+
+        .login-close {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    }
+
+    .login__form {
+        text-align: center;
+    }
+
+    .error {
+        color: rgb(247, 33, 33);
+        margin-bottom: 50px;
+        font-size: 1.25rem;
+    }
+
+    .login-expand {
+        a {
+            margin-left: 30px;
+
+            span {
+                font-size: 1.25rem;
+            }
+        }
+    }
+
+    &.active {
+        transform: translateY(0);
+        transition: transform 0.44s ease 0s;
+    }
+
+    .register-form-contain {
+        padding: 30px;
+        width: 50%;
+        height: 87%;
+        background: var(--second-color);
+        box-shadow: var(--box-shadow);
+        border-radius: $border-radius;
+        @include flex(center, space-around);
+        flex-direction: column;
+        position: relative;
+
+        @include tablet {
+            width: 100%;
+            height: 100%;
+            overflow: scroll;
+
+            .form-group {
+                span {
+                    height: 10px;
+                }
+            }
+        }
+
+        @include mobile {
+            .section__title {
+                font-size: 2rem;
+            }
+        }
+
+        .register-close {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    }
+
+    .register__form {
+        text-align: center;
+    }
+
+    .register-expand {
+        a {
+            margin-left: 30px;
+
+            span {
+                font-size: 1.25rem;
+            }
+        }
+    }
+}

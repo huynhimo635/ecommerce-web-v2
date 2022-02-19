@@ -1,0 +1,54 @@
+$txt-white: #fff;
+$txt-black: #000;
+
+:root {
+    --main-bg: #1d1d1d;
+    --main-color: #fff;
+    --second-color: #3a3a3a;
+    --txt-main-color: #fff;
+    --txt-second-color: #8d8d8d;
+    --btn-main-bg: #df9c33;
+    --box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+        rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    --color-main: #df9c33;
+
+    --main-bg-light: #fff;
+    --main-color-light: #4267b2;
+    --second-color-light: #eaeaec;
+    --txt-main-color-light: #000;
+    --txt-second-color-light: #000;
+    --btn-main-bg-light: #4267b2;
+    --color-main-light: #4267b2;
+    --box-shadow-light: rgba(149, 157, 165, 0.3) 0px 19px 38px,
+        rgba(149, 157, 165, 0.22) 0px 15px 12px;
+
+    --main-bg-dark: #1d1d1d;
+    --main-color-dark: #fff;
+    --second-color-dark: #3a3a3a;
+    --txt-main-color-dark: #fff;
+    --txt-second-color-dark: #8d8d8d;
+    --btn-main-bg-dark: #df9c33;
+    --box-shadow-dark: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+        rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    --color-main-dark: #df9c33;
+}
+
+$header-height: 144px;
+$header-tablet-height: 70px;
+$header-mobile-height: 60px;
+$header-shrink-height: 70px;
+$border-radius: 15px;
+
+$colors: (
+    "blue": #4267b2,
+    "orange": #fbb96b,
+    "pink": #fe7e73,
+    "white": #fff,
+    "black": #000,
+    "red": #ff0000
+);
+
+$mobile-width: 600px;
+$tablet-width: 1024px;
+
+$numbers: (0, 1, 2, 3, 4, 5, 6, 7, 8);

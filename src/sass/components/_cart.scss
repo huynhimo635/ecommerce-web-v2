@@ -1,0 +1,105 @@
+.cart {
+    @include flex(flex-start, flex-start);
+
+    @include tablet {
+        flex-wrap: wrap;
+        width: 100%;
+        @include flex(center, center);
+        flex-direction: column;
+    }
+
+    &__info {
+        // width: 40%;
+        margin-top: 30px;
+        margin-right: 30px;
+        padding: 20px;
+        box-shadow: var(--box-shadow);
+        position: sticky;
+        top: calc(#{$header-shrink-height} + 20px);
+
+        @include tablet {
+            width: 75%;
+            margin: 20px 0;
+            position: unset;
+        }
+
+        @include mobile {
+            width: 100%;
+        }
+
+        &__txt {
+            & > * {
+                margin-bottom: 10px;
+            }
+
+            p {
+                font-size: 1.25rem;
+            }
+
+            &__price {
+                @include flex(center, space-between);
+                font-size: 1.25rem;
+                padding: 10px 0;
+
+                span:nth-child(2) {
+                    font-size: 2rem;
+                    color: var(--main-color);
+                    font-weight: 600;
+                }
+            }
+        }
+
+        &__btn > * {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__list {
+        flex-grow: 1;
+    }
+
+    &__item {
+        @include flex(center, flex-start);
+        margin-bottom: 20px;
+
+        &__image {
+            margin-right: 20px;
+
+            img {
+                height: 150px;
+            }
+        }
+
+        &__info {
+            @include flex(center, space-between);
+            flex-grow: 1;
+
+            @include mobile {
+                @include flex(flex-start, flex-start);
+                flex-direction: column;
+            }
+
+            &__name {
+                width: 40%;
+                text-transform: capitalize;
+            }
+
+            &__name,
+            &__price {
+                font-size: 1.25rem;
+            }
+
+            &__del {
+                font-size: 1.5rem;
+
+                & > i {
+                    cursor: pointer;
+
+                    &:hover {
+                        color: red;
+                    }
+                }
+            }
+        }
+    }
+}

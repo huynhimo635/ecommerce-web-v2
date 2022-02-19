@@ -1,0 +1,135 @@
+.c {
+    height: calc(100vh - #{$header-height});
+    position: relative;
+    font-family: "Roboto";
+
+    form {
+        margin-top: 20px;
+    }
+
+    input {
+        width: 100%;
+        height: 50px;
+        border: none;
+        border-bottom: 1px solid var(--main-color);
+        margin: 10px 0px;
+        margin-right: 20px;
+        font-size: 14px;
+        padding-left: 10px;
+        color: var(--txt-main-color);
+        background-color: var(--main-bg) !important;
+    }
+
+    textarea {
+        width: 100%;
+        margin: 10px 0px;
+        font-size: 14px;
+        padding: 10px;
+        color: var(--txt-main-color);
+        font-family: "Roboto";
+        background-color: var(--main-bg) !important;
+        border-color: var(--main-color);
+    }
+}
+
+.c-bg {
+    width: 20px;
+    height: calc(100vh - #{$header-height});
+    background-color: var(--btn-main-bg);
+    position: absolute;
+}
+
+.c-wrapper {
+    padding: 50px;
+    display: flex;
+}
+
+.c-left {
+    flex: 1;
+}
+
+.c-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.c-title {
+    font-size: 60px;
+    width: 80%;
+}
+
+.c-info-item {
+    display: flex;
+    align-items: center;
+    margin: 50px 0px;
+    width: 70%;
+
+    span {
+        font-size: 1.5rem;
+        font-weight: 400;
+    }
+}
+
+.c-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
+}
+
+.c-desc {
+    font-weight: 200;
+    font-size: 1.5rem;
+}
+
+// button {
+//     border: none;
+//     padding: 15px;
+//     background-color: #59b256;
+//     color: white;
+//     font-weight: 500;
+//     cursor: pointer;
+// }
+
+@media screen and (max-width: 480px) {
+    .c-wrapper {
+        flex-direction: column;
+        padding: 0px 50px;
+    }
+
+    .c-title {
+        font-size: 30px;
+    }
+
+    .c-info-item {
+        margin: 20px 0px;
+        width: 100%;
+    }
+
+    .c-desc {
+        display: none;
+    }
+
+    .c {
+        form {
+            margin-top: 0px;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            flex-wrap: wrap;
+        }
+
+        input {
+            width: 100%;
+            height: 40px;
+            margin: 10px;
+            margin-left: 0;
+        }
+    }
+
+    // button {
+    //     margin-top: 10px;
+    // }
+}

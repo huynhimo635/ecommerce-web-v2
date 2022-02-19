@@ -1,0 +1,31 @@
+.footer {
+    padding: 70px 0;
+    box-shadow: var(--box-shadow);
+    font-size: 1.1rem;
+    width: 100%;
+    font-family: "Roboto";
+
+    &__title {
+        font-weight: bold;
+        margin-bottom: 2rem;
+        text-transform: uppercase;
+    }
+
+    &__content {
+        p {
+            margin-bottom: 1.25rem;
+        }
+    }
+
+    &__logo {
+        height: 60px;
+    }
+
+    &__about {
+        p {
+            margin: 2rem;
+
+            font-weight: 600;
+        }
+    }
+}
